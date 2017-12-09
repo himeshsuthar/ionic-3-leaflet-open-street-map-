@@ -1,6 +1,6 @@
 # Ionic 3 Leaflet Map Example
 
-Ionic 2 Example App with Leaflet using OpenStreetMap Layers.
+Ionic 3 Example App with Leaflet using OpenStreetMap Layers.
 
 ## how to continue
 
