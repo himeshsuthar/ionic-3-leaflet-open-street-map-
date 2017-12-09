@@ -79,7 +79,7 @@
     <allow-navigation href="http://132.140.160.114:8100" />
     <engine name="android" spec="6.3.0" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAejpTEI2A7ENoXKLwEvEqtkODuTBOGcwY" />
+        <variable name="API_KEY_FOR_ANDROID" value="ur-api" />
     </plugin>
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
