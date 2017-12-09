@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> <ion-icon name="compass">   Locations</ion-icon></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor = "let x of places">
+  <ion-card-header>
+    {{x.display_name}}
+  </ion-card-header>
+  <ion-card-content>
+    <pre>{{x.address | json}}</pre>
+  </ion-card-content>
+
+</ion-card>
+<ion-card *ngIf="places.length == 0">
+  <ion-card-header>
+NO Location Added  </ion-card-header>
+</ion-card>
+
+</ion-content>

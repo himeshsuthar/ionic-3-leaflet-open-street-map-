@@ -6,9 +6,9 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
+    <ion-list padding>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <ion-icon name="compass"></ion-icon>   {{p.title}}
       </button>
     </ion-list>
   </ion-content>
