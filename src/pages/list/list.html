@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-<ion-card *ngFor = "let x of places">
+<ion-card *ngFor = "let x of places" (click)="itemTapped($event, x)">
   <ion-card-header>
     {{x.display_name}}
   </ion-card-header>

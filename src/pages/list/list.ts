@@ -3,10 +3,11 @@ import { NavController, NavParams } from 'ionic-angular';
 import { LocalStorageService } from 'angular-2-local-storage';
 import { PlacesProvider} from '../../providers/places/places';
 import { LoadingController } from "ionic-angular";
-
+import {PlaceMapPage} from '../../pages/place-map/place-map';
 @Component({
   selector: 'page-list',
-  templateUrl: 'list.html'
+  templateUrl: 'list.html',
+   entryComponents: [PlaceMapPage]
 })
 export class ListPage implements OnInit {
   selectedItem: any;
@@ -53,5 +54,10 @@ async fetchPlaces(){
     })
   })
 }
+  itemTapped(event, place) {
+      this.navCtrl.push(PlaceMapPage, {
+      place: place
+    });
+  }
 
 }

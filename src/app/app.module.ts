@@ -3,12 +3,15 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { GoogleMaps} from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Diagnostic } from '@ionic-native/diagnostic';
 import { HeaderColor } from '@ionic-native/header-color';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+
+import { PlaceMapPage } from '../pages/place-map/place-map';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalStorageModule } from 'angular-2-local-storage';
@@ -19,7 +22,8 @@ import { PlacesProvider } from '../providers/places/places';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    PlaceMapPage
   ],
   imports: [
     BrowserModule,
@@ -35,10 +39,12 @@ import { PlacesProvider } from '../providers/places/places';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    PlaceMapPage
   ],
   providers: [
     HttpModule,
+    Diagnostic,
     HeaderColor,
     HttpClientModule,
     Geolocation,

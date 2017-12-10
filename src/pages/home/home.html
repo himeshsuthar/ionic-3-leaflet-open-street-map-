@@ -8,7 +8,6 @@
 </ion-header>
 
 <ion-content>
-
   <form (submit)="doSubmitData(data)" ngNativeValidate>
   <ion-list>
 
@@ -21,12 +20,12 @@
     <ion-label floating>Description</ion-label>
     <ion-input [(ngModel)]="data.description" required type="textarea" name="dec"></ion-input>
   </ion-item>  
-  <ion-item>
+  <ion-item *ngIf="data.lat">
     <ion-label floating>Lat</ion-label>
     <ion-input [(ngModel)]="data.lat" type="text" required name="lat"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item *ngIf="data.long">
     <ion-label floating>Long</ion-label>
     <ion-input [(ngModel)]="data.long" type="text" required name="long"></ion-input>
   </ion-item>
@@ -43,7 +42,10 @@
   <ion-label>Select Location</ion-label>
 </ion-chip>
 
-<div id="map"> </div>
+<div id="map-container" style="height:50%">
+ <h4>Map Loading ...</h4>
+</div>
+
 
  
 

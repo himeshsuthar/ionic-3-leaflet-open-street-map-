@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import {PlaceMapPage} from '../pages/place-map/place-map';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,7 @@ export class MyApp {
     this.pages = [
       { title: 'Add Location', component: HomePage},
       { title: 'Locations', component: ListPage }
-    ];
+       ];
     this.icons = {
       add: 'add-circle',
       location: 'compass'
